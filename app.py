@@ -63,7 +63,7 @@ def delete_data(sno):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 
 '''intallation:
@@ -80,3 +80,17 @@ if __name__ == "__main__":
 '''To create db in this env we need to run two commands in python interpreter
 1. >>>from app import db
 2. >>>db.create_all()'''
+
+
+
+
+
+
+
+# requirement = develop_flask_code
+# while(desire==satisfied AND proper==satisfied):
+#     develop_flask_code++
+
+# requirement_completed = develop_flask_code
+
+# print(develop_flask_code)
