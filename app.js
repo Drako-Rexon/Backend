@@ -8,7 +8,7 @@ const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
 
 const app = express();
-const port = 8900;
+const port = process.env.PORT || 8900;
 
 dotenv.config();
 
@@ -30,5 +30,5 @@ app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
 
 app.listen(port, () => {
-    console.log(`The server has started at localhost:`);
+    console.log(`The server has started at http://localhost:${port}`);
 });
