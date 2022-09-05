@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const cors = require('cors');
 const userRoute = require('./routes/users.js');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
@@ -20,12 +21,18 @@ mongoose.connect(
     }
 );
 
+app.use(
+    cors({
+        origin: "*",
+    })
+);
+
 //middleware
 app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));
 
-app.get('/', (req,res)=> {
+app.get('/', (req, res) => {
     res.send("Hello there. This is social meadia api");
 });
 app.use('/api/auth', authRoute);
