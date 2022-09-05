@@ -25,6 +25,9 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan('common'));
 
+app.get('/', (req,res)=> {
+    res.send("Hello there. This is social meadia api");
+});
 app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
