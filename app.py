@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
+db = SQLAlchemy(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///todo.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
 
 
 class Todo(db.Model):
@@ -94,3 +94,19 @@ if __name__ == "__main__":
 # requirement_completed = develop_flask_code
 
 # print(develop_flask_code)
+
+
+
+# ! ego is the enemy 
+# ! how to win friends & influence people
+# ! startup myth and models 
+# power of ignored skills 
+# ! the almanack of naval ravikant 
+
+# ! deep work 
+# ! make time 
+# ! indistractable
+# hyper focus 
+# ! do it today 
+# ! getting things done 
+# the one thing 
