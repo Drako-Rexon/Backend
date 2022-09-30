@@ -47,7 +47,7 @@ router.get("/:id", async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
         // ? The below line is for limitting the data ... To secure our data we only need to send only required data
-        const { password, updatedAt, createdAt, ...other } = user._doc
+        const { password, updatedAt, createdAt, ...other } = user._doc;
         res.status(200).json(other);
     } catch (err) {
         return res.status(503).json(err);

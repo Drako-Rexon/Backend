@@ -21,12 +21,6 @@ mongoose.connect(
     }
 );
 
-app.use(
-    cors({
-        origin: "*",
-    })
-);
-
 //middleware
 app.use(express.json());
 app.use(helmet());
