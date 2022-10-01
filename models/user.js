@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const passComplex = require('joi-password-complexity');
-// const Joi = require('joi');
 
 const userScema = new mongoose.Schema({
     name: { type: String, required: true },
@@ -12,6 +11,7 @@ const userScema = new mongoose.Schema({
     gender: { type: String, required: true },
     month: { type: String, required: true },
     year: { type: String, required: true },
+    date: { type: String, required: true },
     likedSongs: { type: [String], default: [] },
     playlists: { type: [String], default: [] },
     isAdmin: { type: Boolean, default: false },
