@@ -1,4 +1,4 @@
-const mongoose = requier("mongoose");
+const mongoose = require("mongoose");
 const Joi = require("joi");
 const { model } = require("mongoose");
 

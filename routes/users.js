@@ -27,9 +27,10 @@ router.post('/', async (req, res) => {
 });
 
 // get all users 
-router.get('/', admin, async (req, res) => {
-    const users = await User.find().select("-password-__v");
-    res.status(200).send({ data: users });
+// ! all user's details only can be getched by admin
+router.get("/", admin, async (req, res) => {
+	const users = await User.find().select("-password -__v");
+	res.status(200).send({ data: users });
 });
 
 // get users by id 
@@ -49,6 +50,7 @@ router.put("/:id", [validObjectId, auth], async (req, res) => {
 });
 
 // delete user by id
+// ! only admin can delete a user
 router.delete('/:id', [validObjectId, admin], async (req, res) => {
     await User.findByIdAndDelete(req.params.id);
     res.status(200).send({message: "Successfully deleted user"});

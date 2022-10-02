@@ -1,4 +1,4 @@
-const e = require('cors');
+// const e = require('cors');
 const jwt = require('jsonwebtoken');
 
 module.exports = (req, res, next) => {
@@ -9,7 +9,7 @@ module.exports = (req, res, next) => {
         if (error) {
             return res.status(400).send({ message: "Invalid Token" });
         } else {
-            if (!validToken.isAdmin) return res.status(403).send({ message: "you don't have access to this content" });
+            if (!validToken.isAdmin) return res.status(403).send({ message: "You don't have access to this content" });
 
             req.user = validToken;
             next();
