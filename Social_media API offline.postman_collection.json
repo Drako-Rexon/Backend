@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "5e4dd9eb-0062-4488-91fb-7dfa425be12f",
+		"name": "Social_media API offline",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18302498"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8900/"
+			},
+			"response": []
+		},
+		{
+			"name": "register new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"vishal\",\r\n    \"email\": \"vishalbhadwa2001@gmail.com\",\r\n    \"password\": \"vishalbhadwa2001@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"vishalbhadwa2001@gmail.com\",\r\n    \"password\": \"vishalbhadwa2001@\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "updating user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is second time updating desc\",\r\n    \"userId\": \"64cfc27284174951ec760cee\",\r\n    \"password\":\"HelloThere\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/users/64cfc27284174951ec760cee"
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314d568ba54b58fb1a5502b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/users/6314d568ba54b58fb1a5502b"
+			},
+			"response": []
+		},
+		{
+			"name": "get user data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8900/api/users/6314d82286a82c11aabad7c6"
+			},
+			"response": []
+		},
+		{
+			"name": "follow user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314edec13a8e8122b6e847b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/users/6314d82286a82c11aabad7c6/follow"
+			},
+			"response": []
+		},
+		{
+			"name": "unfollow user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314d82286a82c11aabad7c6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/users/6314edec13a8e8122b6e847b/unfollow"
+			},
+			"response": []
+		},
+		{
+			"name": "create a post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314edec13a8e8122b6e847b\",\r\n    \"desc\": \"This is loda lassan ehhehehehehhehehehehhehehehehehhe\",\r\n    \"img\": \"https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/nsawwtstb3lng4eb_1592387557.jpeg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "update post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314d82286a82c11aabad7c6\",\r\n    \"desc\": \"The description has been edited|||| Image has been removed\",\r\n    \"img\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/posts/6315920085ea941c9176a9cf"
+			},
+			"response": []
+		},
+		{
+			"name": "delete post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314d82286a82c11aabad7c6\",\r\n    \"desc\": \"deleting this post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/posts/63159b6dd1a7e353ba2e4fa6"
+			},
+			"response": []
+		},
+		{
+			"name": "like a post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"6314d82286a82c11aabad7c6\",\r\n    \"desc\": \"liking this post\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/posts/63159bb3d1a7e353ba2e4faa/like"
+			},
+			"response": []
+		},
+		{
+			"name": "get a post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "localhost:8900/api/posts/63159bb3d1a7e353ba2e4faa"
+			},
+			"response": []
+		},
+		{
+			"name": "getting all posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":\"6314edec13a8e8122b6e847b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8900/api/posts/timeline/all"
+			},
+			"response": []
+		}
+	]
+}
